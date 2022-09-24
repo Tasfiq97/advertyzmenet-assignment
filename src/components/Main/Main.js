@@ -1,7 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
 import styled from 'styled-components';
-import loader from "../../assets/Curve-Loading.gif"
 const Main = ({data}) => {
   
     const {first_name,last_name,email,avatar}=data ||{}

@@ -11,13 +11,10 @@ const Navbar = () => {
     const handleUsers=async()=>{
        setIsLoading(true)
         await axios.get("https://reqres.in/api/users?page=1").then(result=>{
-          
            setTimeout(()=>{
             setData(result.data?.data)
             setIsLoading(false);
            },1500)
-           
-            
         })
         
     }
@@ -40,9 +37,7 @@ const Navbar = () => {
                     data?.map(data=><Main
                     data={data}
                     key={data.id}
-                    isLoading={isLoading}
                     ></Main>)
-                
              }
               </Body> 
          }
